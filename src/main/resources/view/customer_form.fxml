@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="763.0" prefWidth="1080.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.nl.nltecnologies.controller.CustomerFromController">
+   <children>
+      <Pane layoutX="41.0" layoutY="115.0" onKeyReleased="#txtCustIdOnKeyReleased" prefHeight="268.0" prefWidth="998.0" style="-fx-background-radius: 20;">
+         <children>
+            <Label layoutX="23.0" layoutY="89.0" prefHeight="35.0" prefWidth="171.0" text="Name :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="146.0" prefHeight="35.0" prefWidth="171.0" text="Address :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="536.0" layoutY="31.0" prefHeight="35.0" prefWidth="171.0" text="NIC :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="536.0" layoutY="146.0" prefHeight="35.0" prefWidth="171.0" text="Email :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="536.0" layoutY="89.0" prefHeight="35.0" prefWidth="171.0" text="Telephone No :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" layoutX="221.0" layoutY="31.0" onAction="#txtIdOnAction" onKeyReleased="#txtCustIdOnKeyReleased" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtName" layoutX="221.0" layoutY="89.0" onAction="#nameOnAction" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtAddress" layoutX="221.0" layoutY="146.0" onAction="#addressOnAction" onKeyReleased="#txtAddressOnKeyReleased" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtNIC" layoutX="725.0" layoutY="31.0" onAction="#nicOnAction" onKeyReleased="#txtNicOnKeyReleased" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtTel" layoutX="725.0" layoutY="89.0" onAction="#telOnAction" onKeyReleased="#txtTelOnKeyReleased" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtEmail" layoutX="725.0" layoutY="146.0" onKeyReleased="#txtEmailOnKeyReleased" opacity="0.7" prefHeight="35.0" prefWidth="171.0" style="-fx-background-radius: 10;" />
+            <Button layoutX="416.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="106.0" style="-fx-background-radius: 20;" text="Add">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="550.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="106.0" style="-fx-background-radius: 20;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="680.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="106.0" style="-fx-background-radius: 20;" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="811.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="106.0" style="-fx-background-radius: 20;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label layoutX="23.0" layoutY="31.0" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: #000000;" text="Customer Id :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="45.0" layoutY="396.0" prefHeight="46.0" prefWidth="317.0">
+         <children>
+            <Button alignment="CENTER" layoutX="214.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnSearchCustomersOnAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-radius: 20;" text="Search">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField fx:id="txtSearchCustomers" layoutX="14.0" layoutY="11.0" onAction="#txtSearchCustomersOnAction" opacity="0.7" prefHeight="25.0" prefWidth="171.0" promptText="Search Contact" style="-fx-background-radius: 7;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+         </children>
+      </Pane>
+      <TableView fx:id="tblCustomer" layoutX="41.0" layoutY="454.0" opacity="0.7" prefHeight="296.0" prefWidth="998.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="101.60001373291016" text="Customer Id" />
+          <TableColumn fx:id="colName" minWidth="2.399993896484375" prefWidth="176.00003051757812" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="195.99996948242188" text="Address" />
+            <TableColumn fx:id="colNIC" prefWidth="160.0" text="NIC" />
+            <TableColumn fx:id="colTel" prefWidth="168.0" text="Tel Number" />
+            <TableColumn fx:id="colEmail" prefWidth="208.7999267578125" text="Email" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="14.0" prefHeight="18.0" prefWidth="680.0" text="Customer Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="763.0" prefWidth="1080.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.nl.nltecnologies.controller.SupplierFormController">
+   <children>
+      <AnchorPane layoutX="33.0" layoutY="105.0" prefHeight="284.0" prefWidth="1013.0" style="-fx-background-color: shadow;">
+         <children>
+            <Label layoutX="31.0" layoutY="46.0" prefHeight="27.0" prefWidth="166.0" text="Supplier ID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSupId" layoutX="204.0" layoutY="40.0" onAction="#txtSupIdOnAction" onKeyReleased="#txtSupIdOnKeyReleased" opacity="0.7" prefHeight="34.0" prefWidth="269.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="32.0" layoutY="98.0" prefHeight="21.0" prefWidth="165.0" text="Company Name :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCompanyName" layoutX="205.0" layoutY="93.0" onAction="#txtCompanyNameOnAction" opacity="0.7" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="31.0" layoutY="149.0" prefHeight="27.0" prefWidth="166.0" text="Person Name :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPersonName" layoutX="204.0" layoutY="145.0" onAction="#txtPersonNameOnAction" opacity="0.7" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="499.0" layoutY="44.0" prefHeight="27.0" prefWidth="166.0" text="Contact No :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtContact" layoutX="674.0" layoutY="38.0" onAction="#txtContactNameOnAction" onKeyReleased="#txtContactNoOnKeyReleased" opacity="0.7" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="503.0" layoutY="96.0" prefHeight="27.0" prefWidth="166.0" text="Location :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLocation" layoutX="674.0" layoutY="92.0" onAction="#txtLocationOnAction" opacity="0.7" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="503.0" layoutY="149.0" prefHeight="27.0" prefWidth="166.0" text="Email :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="674.0" layoutY="143.0" onKeyReleased="#txtEmailOnKeyReleased" opacity="0.7" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 10;" />
+            <Button alignment="CENTER" layoutX="327.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-radius: 20;" text="Save">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="463.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-radius: 20;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="598.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-radius: 20;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="734.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-radius: 20;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="869.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnSupplierReportOnAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-radius: 20;" text="Report">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="201.0" layoutY="27.0" prefHeight="18.0" prefWidth="680.0" text="Supplier Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSupplier" layoutX="27.0" layoutY="468.0" opacity="0.7" prefHeight="277.0" prefWidth="1026.0">
+         <columns>
+            <TableColumn fx:id="colSupId" prefWidth="87.0" text="Sup ID" />
+            <TableColumn fx:id="colCompanyName" prefWidth="170.0" text="Campnay Name" />
+            <TableColumn fx:id="colPersonName" prefWidth="206.0" text="Person Name" />
+            <TableColumn fx:id="coltel" prefWidth="181.0" text="Contact No" />
+            <TableColumn fx:id="colLocation" prefWidth="156.0" text="Location" />
+            <TableColumn fx:id="colEmail" prefWidth="223.0" text="Email" />
+         </columns>
+      </TableView>
+      <Pane layoutX="37.0" layoutY="403.0" prefHeight="42.0" prefWidth="328.0" style="-fx-background-color: shadow; -fx-background-radius: 50;">
+         <children>
+            <TextField fx:id="txtSearchSupplier" layoutX="14.0" layoutY="9.0" onAction="#txtSearchSupplierOnAction" opacity="0.7" prefHeight="25.0" prefWidth="194.0" promptText="Search Company Name" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button alignment="CENTER" layoutX="224.0" layoutY="9.0" mnemonicParsing="false" onAction="#btnSearchSupplierOnAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-radius: 15;" text="Search">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

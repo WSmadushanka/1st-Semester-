@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="763.0" prefWidth="1080.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.nl.nltecnologies.controller.EmployeeFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="234.0" layoutY="14.0" prefHeight="18.0" prefWidth="612.0" text="Employee Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="608.0" opacity="0.7" prefHeight="140.0" prefWidth="1031.0">
+         <columns>
+            <TableColumn fx:id="colEid" prefWidth="94.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="158.0" text="Name" />
+            <TableColumn fx:id="colNic" prefWidth="128.0" text="NIC" />
+            <TableColumn fx:id="colTel" prefWidth="146.0" text="Tel Number" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="177.0" text="Email" />
+            <TableColumn fx:id="colPosition" prefWidth="112.0" text="Position" />
+            <TableColumn fx:id="colDob" prefWidth="113.0" text="DOB" />
+            <TableColumn fx:id="colDOR" prefWidth="102.0" text="D O Rejistar" />
+         </columns>
+      </TableView>
+      <Pane fx:id="main_pain" layoutX="24.0" layoutY="122.0" prefHeight="415.0" prefWidth="1031.0">
+         <children>
+            <AnchorPane layoutX="7.0" prefHeight="415.0" prefWidth="1031.0">
+               <children>
+                  <Label layoutX="606.0" layoutY="90.0" prefHeight="26.0" prefWidth="166.0" text="Date of Birth :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="92.0" prefHeight="26.0" prefWidth="166.0" text="Name :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="148.0" prefHeight="26.0" prefWidth="166.0" text="Address :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="204.0" prefHeight="26.0" prefWidth="166.0" text="NIC :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="37.0" prefHeight="26.0" prefWidth="166.0" text="Employee ID :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="596.0" layoutY="35.0" prefHeight="26.0" prefWidth="166.0" text="Telephone Number :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="606.0" layoutY="146.0" prefHeight="26.0" prefWidth="166.0" text="Date of registration :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="606.0" layoutY="310.0" prefHeight="26.0" prefWidth="166.0" text="Position :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="606.0" layoutY="201.0" prefHeight="26.0" prefWidth="166.0" text="Email :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="606.0" layoutY="253.0" prefHeight="26.0" prefWidth="166.0" text="Basic Salary :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" layoutX="241.0" layoutY="88.0" onAction="#nameOnAction" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtId" layoutX="241.0" layoutY="33.0" onAction="#txtIdOnAction" onKeyReleased="#txtEmpIdOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtAddress" layoutX="241.0" layoutY="144.0" onAction="#addressOnAction" onKeyReleased="#txtAddressOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtNIC" layoutX="241.0" layoutY="199.0" onAction="#nicOnAction" onKeyReleased="#txtNicOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtTel" layoutX="786.0" layoutY="33.0" onAction="#telOnAction" onKeyReleased="#txtTelOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtSalary" layoutX="786.0" layoutY="251.0" onAction="#txtSalOnAction" onKeyReleased="#txtSalOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtEmail" layoutX="786.0" layoutY="199.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txtPosition" layoutX="786.0" layoutY="308.0" onAction="#txtPositionOnAction" opacity="0.7" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" />
+                  <DatePicker fx:id="txtDOB" layoutX="786.0" layoutY="88.0" onAction="#txtDOBOnAction" opacity="0.7" prefHeight="30.0" prefWidth="230.0" />
+                  <DatePicker fx:id="txtEnrollDate" layoutX="786.0" layoutY="144.0" onAction="#txtRegDateOnAction" opacity="0.7" prefHeight="30.0" prefWidth="230.0" />
+                  <ImageView fx:id="ImgView" fitHeight="176.0" fitWidth="153.0" layoutX="13.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="241.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnImportImgOnAction" prefHeight="26.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Import">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="435.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="548.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Update">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="664.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="779.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="894.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnEmployeeReportOnAction" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Report">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <Button layoutX="372.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnScanOnAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Scan">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutX="14.0" layoutY="561.0" prefHeight="42.0" prefWidth="278.0">
+         <children>
+            <TextField fx:id="txtSearchEmployee" layoutX="8.0" layoutY="6.0" onAction="#txtSearchEmployeeOnAction" opacity="0.7" prefHeight="30.0" prefWidth="153.0" promptText="Employee Id" style="-fx-background-radius: 10;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="173.0" layoutY="9.0" mnemonicParsing="false" onAction="#btnSearchEmployeeOnAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 20;" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="763.0" prefWidth="1080.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.nl.nltecnologies.controller.RepairFormController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="118.0" prefHeight="313.0" prefWidth="1025.0" style="-fx-background-color: shadow; -fx-background-radius: 20;">
+         <children>
+            <Pane layoutX="19.0" layoutY="19.0" prefHeight="220.0" prefWidth="465.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="139.0" prefHeight="29.0" prefWidth="172.0" text="Customer ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustomerId" layoutX="217.0" layoutY="140.0" prefHeight="27.0" prefWidth="0.0" textFill="#0088ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="181.0" prefHeight="29.0" prefWidth="172.0" text="Item Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtItemName" layoutX="217.0" layoutY="183.0" onAction="#txtItemNameOnAction" opacity="0.7" prefHeight="26.0" prefWidth="200.0" style="-fx-background-radius: 10;" />
+                  <Label fx:id="lblCustomerName" layoutX="217.0" layoutY="95.0" prefHeight="30.0" prefWidth="0.0" textFill="#0088ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="99.0" prefHeight="22.0" prefWidth="172.0" text="Customer Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" layoutX="366.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnAddCustomerOnAction" prefHeight="28.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="+ New">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="20.0" layoutY="56.0" prefHeight="22.0" prefWidth="172.0" text="Customer Tel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerTel" layoutX="217.0" layoutY="54.0" onAction="#txtCustomerTelOnAction" onKeyReleased="#txtCustomerTellOnKeyReleased" opacity="0.7" prefHeight="26.0" prefWidth="200.0" style="-fx-background-radius: 10;" />
+                  <Label layoutX="19.0" layoutY="11.0" prefHeight="29.0" prefWidth="172.0" text="Repair Id " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRepairId" layoutX="217.0" layoutY="13.0" onAction="#txtRidOnAction" onKeyReleased="#txtRepairIdOnKeyReleased" opacity="0.7" prefHeight="26.0" prefWidth="200.0" style="-fx-background-radius: 10;" />
+               </children>
+            </Pane>
+            <Pane layoutX="496.0" layoutY="4.0" prefHeight="190.0" prefWidth="526.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="140.0" prefHeight="29.0" prefWidth="143.0" text="Cost" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCost" layoutX="202.0" layoutY="141.0" onAction="#txtCostOnAction" onKeyReleased="#txtCostOnKeyReleased" opacity="0.7" prefHeight="22.0" prefWidth="295.0" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="100.0" prefHeight="29.0" prefWidth="143.0" text="Description" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDescription" layoutX="202.0" layoutY="101.0" onAction="#txtDescriptionOnAction" opacity="0.7" prefHeight="22.0" prefWidth="295.0" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="62.0" prefHeight="29.0" prefWidth="143.0" text="Return Date" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="txtReturnDate" editable="false" layoutX="202.0" layoutY="64.0" onAction="#dpReturnDateOnAction" opacity="0.7" prefHeight="25.0" prefWidth="200.0" />
+                  <Label layoutX="14.0" layoutY="26.0" prefHeight="29.0" prefWidth="143.0" text="Recive Date" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="txtReceiveDate" editable="false" layoutX="202.0" layoutY="28.0" onAction="#dpReceiveDateOnAction" opacity="0.7" prefHeight="22.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+            <Button alignment="CENTER" layoutX="441.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="557.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="673.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="788.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="904.0" layoutY="258.0" mnemonicParsing="false" onAction="#btnBillOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Bill">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="201.0" layoutY="24.0" prefHeight="18.0" prefWidth="680.0" text="Repair Managemant" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <Pane layoutX="28.0" layoutY="432.0" prefHeight="51.0" prefWidth="295.0" style="-fx-background-color: shadow;">
+         <children>
+            <TextField fx:id="txtSearchRepair" layoutX="14.0" layoutY="9.0" onAction="#txtSearchRepairOnAction" opacity="0.7" prefHeight="30.0" prefWidth="165.0" promptText="Search Repair Id" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button alignment="CENTER" layoutX="195.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSearchRepairOnAction" prefHeight="27.0" prefWidth="86.0" style="-fx-background-radius: 20;" text="Search">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tblReturnedRepair" layoutX="27.0" layoutY="494.0" opacity="0.7" prefHeight="249.0" prefWidth="1026.0">
+         <columns>
+            <TableColumn fx:id="colRepairId" prefWidth="75.0" text="Repair Id" />
+            <TableColumn fx:id="colItemName" prefWidth="132.0" text="Item Name" />
+            <TableColumn fx:id="colReturncolDescriptionedDescription" prefWidth="259.0" text="Description" />
+            <TableColumn fx:id="colCustomerId" prefWidth="111.0" text="Customer Id" />
+            <TableColumn fx:id="colCost" prefWidth="127.0" text="Cost" />
+            <TableColumn fx:id="colReceiveDate" prefWidth="166.0" text="Receive Date" />
+            <TableColumn fx:id="colReturnDate" prefWidth="154.0" text="True return Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="581.0" prefWidth="865.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.nl.nltecnologies.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="584.0" fitWidth="881.0" layoutY="-1.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/person-wearing-high-tech-ar-headset-surrounded-by-bright-blue-neon-colors.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="369.0" fitWidth="374.0" layoutY="214.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Image_NL_logo-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="149.0" fitWidth="222.0" layoutX="547.0" layoutY="-1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/images__1_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="496.0" layoutY="141.0" prefHeight="421.0" prefWidth="300.0" style="-fx-background-color: #4C00#0F044C33; -fx-background-radius: 35;">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="28.0" layoutY="138.0" onAction="#txtUserNameOnAction" onKeyReleased="#txtUserNameOnKeyReleased" opacity="0.7" prefHeight="44.0" prefWidth="243.0" promptText="\@User Name" style="-fx-background-radius: 20;" />
+            <PasswordField fx:id="txtPassword" layoutX="28.0" layoutY="214.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnActionKeyReleased" opacity="0.7" prefHeight="44.0" prefWidth="243.0" promptText="\@Password" style="-fx-background-radius: 20;" />
+            <JFXButton buttonType="RAISED" layoutX="68.0" layoutY="299.0" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="163.0" style="-fx-background-color: #4C00#0F044C33; -fx-background-radius: 20;" text="Log in" textFill="#c90404">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="372.0" text="Do you don't have any account?" textFill="#c90404">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="209.0" layoutY="369.0" onAction="#hyperRegistrationOnAction" style="-fx-effect: shadow;" text="Register" textFill="#c90404">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="81.0" fitWidth="79.0" layoutX="110.0" layoutY="28.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/images-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
